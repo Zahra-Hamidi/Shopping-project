@@ -1,0 +1,287 @@
+
+
+html{
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#root{
+  height: 100%;
+}
+.grid-container{
+  display: grid;
+  grid-template-areas: 
+  'header'
+  'main'
+  'footer';
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+header{
+  grid-area: header;
+  background-color: #203040;
+}
+main{
+  grid-area: main;
+  padding: 1rem;
+}
+footer{
+  grid-area: footer;
+  background-color: #203040;
+  color: #fff;
+}
+h1{
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+h2{
+  font-size: 1.6rem;
+  padding: 1rem 0;
+}
+a{
+  text-decoration: none;
+}
+ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+li{
+  margin-top: 0.5rem;
+}
+input,
+select,
+textarea,
+button {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid #a4a4a4;
+  font-size: 1.1rem;
+  font-family: Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+button{
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+button.primary{
+  background-color: #f0c040;
+}
+button.block{
+  width: 100%;
+}
+button.small{
+  font-size: 1.2rem;
+}
+input:hover,
+select:hover,
+textarea:hover,
+button:hover{
+  border: 0.1rem solid #404040;
+}
+a:hover{
+  color: #ff8000;
+}
+header a{
+  color: #fff;
+  padding: 1rem;
+}
+a.brand{
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.badge{
+  background-color: #f02020;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  padding: 0.2rem 0.7rem;
+  margin-left: 0.2rem;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.row.center{
+  justify-content: center;
+}
+.row.top{
+  align-items: flex-start;
+}
+img{
+  border-radius: 0.5rem;
+}
+img.small{
+  max-width: 5rem;
+  width: 100%;
+}
+img.medium{
+  max-width: 18rem;
+  width: 100%;
+}
+img.large{
+  width: 100%;
+}
+.card{
+  border: 0.1rem #c0c0c0 solid;
+  background-color: #f8f8f8;
+  border-radius: 0.5rem;
+  margin: 1rem;
+}
+.card-body{
+  padding: 1rem;
+}
+.card-body > * {
+  margin-bottom: 0.5rem;
+}
+/* .rating{
+  margin-top: 1rem;
+} */
+.rating span{
+  color: #f0c040;
+  margin: 0.1rem;
+}
+.price{
+  font-size: 2rem;
+}
+.rating span:last-child{
+  color: #404040;
+  font-size: 1.2rem;
+}
+.rating span i{
+  font-size: 1.5rem;
+}
+.col-1{
+  flex: 1 1 25rem;
+}
+.col-2{
+  flex: 2 1 20rem;
+}
+.min-30{
+  min-width: 10rem;
+}
+.loading{
+  display: block !important;
+}
+.success{
+  color: #20a020;
+  font-size: 1.2rem;
+}
+.danger{
+  color: #a02020;
+  font-size: 1.2rem;
+}
+.alert{
+  padding: 1rem;
+  border: 0.1rem solid transparent;
+  border-radius: 0.5rem;
+}
+.alert-info{
+  color: #2020a0;
+  background-color: #e0e0ff;
+}
+.alert-danger{
+  color: #a02020;
+  background-color: #ffe0e0;
+}
+.alert-success{
+  color: #20a020;
+  background-color:rgba(0, 255, 0, 0.2);
+}
+.form{
+  max-width: 40rem; 
+   margin: 0 auto;
+}
+.from > div {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+ 
+}
+/* .from .myinp{
+  font-size: 3rem;
+  padding: 0.3rem;
+} */
+.form label{
+  margin: 1rem 0;
+  /* display: block; */
+  font-size: 1rem;
+  font-weight: bold;
+}
+.form input{
+  width: 100%;
+  font-size: 1.2rem;
+}
+.form input[type="radio"]{
+  width: auto;
+}
+.form button{
+  width: 100%;
+  margin: 1.5rem 0.5rem;
+}
+.form  div:last-child{
+  margin-top: 1.5rem 0;
+  font-size: 1.3rem;
+}
+.dropdown{
+  display: inline-block;
+  position: relative;
+}
+.dropdown-content{
+  position: absolute;
+  display: none;
+  right: 0;
+  min-width: 10rem;
+  padding: 1rem;
+  z-index: 1;
+  background-color: #203040;
+  margin: 0;
+  margin-top: 0.4rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+}
+.dropdown:hover .dropdown-content{
+  display: block;
+}
+/* .dropdown-content li{
+  font-size: 1.2rem;
+} */
+.checkout-steps > div {
+  border-top: 0.3rem solid #c0c0c0;
+  color: #c0c0c0;
+  flex: 1;
+  padding: 1rem;
+  font-weight: bold;
+}
+.checkout-steps > div.active{
+  border-top-color: #f08000;
+  color: #f08000;
+}
+.table{
+  width: 100%;
+  border-collapse: collapse;
+}
+.table tbody tr:nth-of-type(odd){
+  background-color: #f4f4f4;
+}
+.table th, .table td{
+  text-align: left;
+  border:0.1rem solid #e4e4e4;
+  padding: 0.5rem;
+}
+.table button{
+  margin: 0 0.2rem;
+}
